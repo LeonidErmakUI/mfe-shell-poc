@@ -1,0 +1,14 @@
+# Node.js
+node_modules/
+
+# Vite
+dist/
+.env
+.env.*
+
+# MacOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

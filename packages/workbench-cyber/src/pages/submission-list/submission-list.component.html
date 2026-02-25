@@ -1,0 +1,42 @@
+<div style="padding: 16px">
+  <h2>🔐 Cyber Submissions</h2>
+  <div *ngIf="loading">Loading submissions...</div>
+  <div *ngIf="error" style="color: red">{{ error }}</div>
+  <table *ngIf="!loading && !error" style="width: 100%; border-collapse: collapse">
+    <thead>
+      <tr style="background: #faf5ff">
+        <th style="padding: 8px; text-align: left; border-bottom: 2px solid #d6bcfa">ID</th>
+        <th style="padding: 8px; text-align: left; border-bottom: 2px solid #d6bcfa">Company</th>
+        <th style="padding: 8px; text-align: left; border-bottom: 2px solid #d6bcfa">Sector</th>
+        <th style="padding: 8px; text-align: left; border-bottom: 2px solid #d6bcfa">Revenue</th>
+        <th style="padding: 8px; text-align: left; border-bottom: 2px solid #d6bcfa">Score</th>
+        <th style="padding: 8px; text-align: left; border-bottom: 2px solid #d6bcfa">Breach</th>
+        <th style="padding: 8px; text-align: left; border-bottom: 2px solid #d6bcfa">Stage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let sub of submissions"
+        (click)="goToDetail(sub.id)"
+        style="cursor: pointer; border-bottom: 1px solid #e2e8f0"
+      >
+        <td style="padding: 8px">{{ sub.id }}</td>
+        <td style="padding: 8px">{{ sub.companyName }}</td>
+        <td style="padding: 8px">{{ sub.industrySector }}</td>
+        <td style="padding: 8px">${{ sub.annualRevenue }}</td>
+        <td
+          style="padding: 8px"
+          [style.color]="sub.securityPostureScore >= 70 ? 'green' : 'orange'"
+        >
+          {{ sub.securityPostureScore }}/100
+        </td>
+        <td style="padding: 8px">{{ sub.breachHistory ? '⚠️ Yes' : '✅ No' }}</td>
+        <td style="padding: 8px">
+          <span style="background: #805ad5; color: white; padding: 2px 8px; border-radius: 4px">
+            {{ sub.status }}
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

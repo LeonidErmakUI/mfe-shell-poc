@@ -1,0 +1,32 @@
+<div style="padding: 16px">
+  <button (click)="back()" style="margin-bottom: 16px; cursor: pointer">← Back</button>
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="sub">
+    <h2>🔐 {{ sub.companyName }}</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px">
+      <div
+        *ngFor="let field of fields"
+        style="padding: 12px; background: #f7fafc; border-radius: 6px"
+      >
+        <div style="font-size: 12px; color: #718096">{{ field.label }}</div>
+        <div style="font-weight: bold">{{ field.value }}</div>
+      </div>
+    </div>
+    <div style="padding: 16px; background: #faf5ff; border-radius: 8px">
+      <h3>🔗 Bind Panel</h3>
+      <button
+        (click)="openBind()"
+        style="
+          background: #805ad5;
+          color: white;
+          padding: 8px 16px;
+          border-radius: 4px;
+          border: none;
+          cursor: pointer;
+        "
+      >
+        Open Bind Wizard
+      </button>
+    </div>
+  </div>
+</div>

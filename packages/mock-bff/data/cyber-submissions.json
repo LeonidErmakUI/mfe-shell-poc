@@ -1,0 +1,24 @@
+[
+  {
+    "id": "SUB-C-001",
+    "companyName": "TechCorp Inc",
+    "industrySector": "Financial Services",
+    "annualRevenue": 250000000,
+    "securityPostureScore": 72,
+    "breachHistory": false,
+    "coverageLimit": 10000000,
+    "status": "F2",
+    "submittedAt": "2024-01-16"
+  },
+  {
+    "id": "SUB-C-002",
+    "companyName": "HealthData Systems",
+    "industrySector": "Healthcare",
+    "annualRevenue": 85000000,
+    "securityPostureScore": 58,
+    "breachHistory": true,
+    "coverageLimit": 5000000,
+    "status": "F6",
+    "submittedAt": "2024-01-20"
+  }
+]

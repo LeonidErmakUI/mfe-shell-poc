@@ -1,0 +1,24 @@
+[
+  {
+    "id": "SUB-M-001",
+    "vesselName": "Atlantic Pioneer",
+    "imoNumber": "IMO9234567",
+    "hullValue": 45000000,
+    "voyageRoute": "Rotterdam → Singapore",
+    "cargoType": "General Cargo",
+    "piClub": "UK P&I Club",
+    "status": "F3",
+    "submittedAt": "2024-01-15"
+  },
+  {
+    "id": "SUB-M-002",
+    "vesselName": "Pacific Star",
+    "imoNumber": "IMO8765432",
+    "hullValue": 72000000,
+    "voyageRoute": "Shanghai → Los Angeles",
+    "cargoType": "Containers",
+    "piClub": "Gard P&I",
+    "status": "F5",
+    "submittedAt": "2024-01-18"
+  }
+]

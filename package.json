@@ -1,0 +1,11 @@
+{
+  "name": "mfe-shell-poc",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "docker compose up",
+    "install:all": "pnpm install"
+  }
+}
